@@ -8,6 +8,7 @@ require('plugins.mason-lspconfig')
 require('plugins.nvim-cmp')
 require('plugins.lualine')
 require('plugins.neo-tree')
+require('plugins.venv-selector')
 
 -- standard configuration
 require('config.options')

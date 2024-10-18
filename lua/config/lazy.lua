@@ -28,6 +28,26 @@ require("lazy").setup({
         {"neovim/nvim-lspconfig"},
         {"williamboman/mason.nvim"},
         {"williamboman/mason-lspconfig.nvim"},
+        {
+            'linux-cultist/venv-selector.nvim',
+            dependencies = {
+                'neovim/nvim-lspconfig',
+                'mfussenegger/nvim-dap', 'mfussenegger/nvim-dap-python',
+                {
+                    "nvim-telescope/telescope.nvim",
+                    branch = "0.1.x",
+                    dependencies = {
+                        "nvim-lua/plenary.nvim",
+                    },
+                },
+            },
+            branch = "regexp",
+            lazy = false,
+            keys = {
+                -- Keymap to open VenvSelector to pick a venv.
+                { '<leader>vs', '<cmd>VenvSelect<cr>' },
+            },
+        },
 
         -- completion
         {"L3MON4D3/LuaSnip"},
@@ -58,6 +78,17 @@ require("lazy").setup({
             requires = {
                 "nvim-tree/nvim-web-devicons", opt = true
             },
+        },
+        {
+            "nvim-treesitter/nvim-treesitter",
+            run = ":TSUpdate",
+            config = function()
+                require("nvim-treesitter.configs").setup {
+                    highlight = {
+                        enable = true,
+                    },
+                }
+            end
         },
     },
     -- Configure any other settings here. See the documentation for more details.
