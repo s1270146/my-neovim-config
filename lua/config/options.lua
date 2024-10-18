@@ -5,6 +5,7 @@ local function set_opt(key, value)
 end
 
 set_opt('number', true)
+set_opt('relativenumber', true)
 
 set_opt('expandtab', true)
 set_opt('shiftwidth', 4)
