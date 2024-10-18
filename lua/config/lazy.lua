@@ -23,26 +23,47 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  spec = {
-    -- import your plugins
-    -- { import = "plugins" },
-    {
-        "nvim-tree/nvim-web-devicons",
+    spec = {
+        -- lsp
+        {"neovim/nvim-lspconfig"},
+        {"williamboman/mason.nvim"},
+        {"williamboman/mason-lspconfig.nvim"},
+
+        -- completion
+        {"L3MON4D3/LuaSnip"},
+        {"hrsh7th/nvim-cmp"},
+        {"hrsh7th/cmp-nvim-lsp"},
+        {"hrsh7th/cmp-buffer"},
+        {"saadparwaiz1/cmp_luasnip"},
+        {"cohama/lexima.vim"},
+
+        -- icon
+        {"nvim-tree/nvim-web-devicons"},
+
+        -- tree
+        {
+            "nvim-neo-tree/neo-tree.nvim",
+            branch = "v3.x",
+            dependencies = {
+                "nvim-lua/plenary.nvim",
+                "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+                "MunifTanjim/nui.nvim",
+                -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+            },
+        },
+
+        -- looks
+        {
+            "nvim-lualine/lualine.nvim",
+            requires = {
+                "nvim-tree/nvim-web-devicons", opt = true
+            },
+        },
     },
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    },
-}
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+    -- Configure any other settings here. See the documentation for more details.
+    -- colorscheme that will be used when installing plugins.
+    install = { colorscheme = { "habamax" } },
+    -- automatically check for plugin updates
+    checker = { enabled = true },
 })
+
