@@ -90,6 +90,18 @@ require("lazy").setup({
                 }
             end
         },
+
+        -- ssh
+        {
+            "amitds1997/remote-nvim.nvim",
+            version = "v0.3.11",
+            dependencies = {
+                "nvim-lua/plenary.nvim",
+                "MunifTanjim/nui.nvim",
+                "nvim-telescope/telescope.nvim",
+            },
+            config = true,
+        },
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.

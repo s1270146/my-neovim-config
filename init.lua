@@ -9,6 +9,7 @@ require('plugins.nvim-cmp')
 require('plugins.lualine')
 require('plugins.neo-tree')
 require('plugins.venv-selector')
+require('plugins.remote-nvim')
 
 -- standard configuration
 require('config.options')
