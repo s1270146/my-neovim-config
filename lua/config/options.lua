@@ -1,5 +1,3 @@
-vim.opt.guifont = "JetBrainsMono Nerd Font:h12"
-
 local function set_opt(key, value)
     vim.opt[key] = value
 end
