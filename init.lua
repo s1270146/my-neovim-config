@@ -10,6 +10,7 @@ require('plugins.lualine')
 require('plugins.neo-tree')
 require('plugins.venv-selector')
 require('plugins.remote-nvim')
+require('plugins.barbar')
 
 -- standard configuration
 require('config.options')

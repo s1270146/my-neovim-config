@@ -84,7 +84,11 @@ require("lazy").setup({
             run = ":TSUpdate",
             config = function()
                 require("nvim-treesitter.configs").setup {
+                    ensure_installed = { "python", "lua", "javascript", "latex" },
                     highlight = {
+                        enable = true,
+                    },
+                    indent = {
                         enable = true,
                     },
                 }
@@ -101,6 +105,20 @@ require("lazy").setup({
                 "nvim-telescope/telescope.nvim",
             },
             config = true,
+        },
+
+        -- tab
+        {
+            'romgrk/barbar.nvim',
+            dependencies = {
+                'lewis6991/gitsigns.nvim',
+                'nvim-tree/nvim-web-devicons',
+            },
+            init = function() vim.g.barbar_auto_setup = false end,
+            opts = {
+
+            },
+            version = '^1.0.0',
         },
     },
     -- Configure any other settings here. See the documentation for more details.
