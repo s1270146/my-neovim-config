@@ -11,6 +11,7 @@ require('plugins.neo-tree')
 require('plugins.venv-selector')
 require('plugins.remote-nvim')
 require('plugins.barbar')
+require('plugins.swagger-preview')
 
 -- standard configuration
 require('config.options')

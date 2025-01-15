@@ -120,6 +120,10 @@ require("lazy").setup({
             },
             version = '^1.0.0',
         },
+        {
+            "vinnymeller/swagger-preview.nvim",
+            run = "npm install -g swagger-ui-watcher",
+        }
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
