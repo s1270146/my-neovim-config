@@ -123,6 +123,9 @@ require("lazy").setup({
         {
             "vinnymeller/swagger-preview.nvim",
             run = "npm install -g swagger-ui-watcher",
+        },
+        {
+            "lewis6991/gitsigns.nvim",
         }
     },
     -- Configure any other settings here. See the documentation for more details.

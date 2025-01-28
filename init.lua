@@ -12,6 +12,7 @@ require('plugins.venv-selector')
 require('plugins.remote-nvim')
 require('plugins.barbar')
 require('plugins.swagger-preview')
+require('plugins.gitsigns')
 
 -- standard configuration
 require('config.options')
