@@ -38,3 +38,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
     set("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", { buffer = true })
   end,
 })
+
+vim.cmd[[colorscheme vim]]
