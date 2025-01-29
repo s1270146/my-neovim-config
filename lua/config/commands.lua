@@ -39,4 +39,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-vim.cmd[[colorscheme vim]]
+vim.cmd[[colorscheme sorbet]]
