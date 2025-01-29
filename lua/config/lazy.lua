@@ -48,6 +48,16 @@ require("lazy").setup({
                 { '<leader>vs', '<cmd>VenvSelect<cr>' },
             },
         },
+        {
+            "nvimtools/none-ls.nvim",
+            event = "VeryLazy",
+            opts = function(_, opts)
+                local nls = require("null-ls")
+                opts.sources = opts.sources or {}
+                table.insert(opts.sources, nls.builtins.formatting.prettierd)
+            end,
+        },
+       
 
         -- completion
         {"L3MON4D3/LuaSnip"},
@@ -126,7 +136,14 @@ require("lazy").setup({
         },
         {
             "lewis6991/gitsigns.nvim",
-        }
+        },
+        {
+            "folke/noice.nvim",
+            event = "VeryLazy",
+            dependencies = {
+                "MunifTanjim/nui.nvim",
+            }
+        }    
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
