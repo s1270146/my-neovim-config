@@ -142,8 +142,9 @@ require("lazy").setup({
             event = "VeryLazy",
             dependencies = {
                 "MunifTanjim/nui.nvim",
+                "rcarriga/nvim-notify"
             }
-        }    
+        }
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
