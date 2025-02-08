@@ -6,8 +6,8 @@ set_opt('number', true)
 set_opt('relativenumber', true)
 
 set_opt('expandtab', true)
-set_opt('shiftwidth', 4)
-set_opt('tabstop', 4)
+set_opt('shiftwidth', 2)
+set_opt('tabstop', 2)
 
 set_opt('ignorecase', true)
 set_opt('smartcase', true)
